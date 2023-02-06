@@ -22,20 +22,21 @@ int main()
     for(int i = 0; i < SIZE; i++)
         std::cout << myData[i] << " ";
     do{
-    std::cout << std::endl;
-    std::cout<<"\nInput index: ";
-    std::cin>>i;
-    std::cout<<"\nInput value: ";
-    std::cin>>v;
-    if(i<0||i>SIZE-1){
-        std::cout<<"\nIndex out of range. Exit.";
-        return 0;
-    }
-    else
-        myData[i] = v;
-        std::cout<<std::endl;
-        for(int i = 0; i < SIZE; i++)
-            std::cout << myData[i] << " ";
-    } while (i>=0 || i<=SIZE-1);
+        std::cout << std::endl;
+        std::cout<<"\nInput index: ";
+        std::cin>>i;
+        std::cout<<"\nInput value: ";
+        std::cin>>v;
+        if(i<0||i>SIZE-1){
+            std::cout<<"\nIndex out of range. Exit.";
+        }
+        else{
+            myData[i] = v;
+            std::cout<<std::endl;
+            for(int i = 0; i < SIZE; i++){
+                std::cout << myData[i] << " ";
+            }
+        }
+    }while (i>=0 && i<=SIZE-1);
     return 0;
 }
